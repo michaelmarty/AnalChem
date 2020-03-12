@@ -1,5 +1,4 @@
-# AnalChem
-Python notebooks for teaching undergraduate analytical chemistry.
+# Python notebooks for teaching undergraduate Analytical Chemistry
 
 We used these notebooks in conjunction with the Harris textbook for the junior level Analytical Chemistry course at the University of Arizona. The students did everything on the cloud. There are several cloud servers that can be used, including ones from Microsoft (https://notebooks.azure.com/) and Google (https://colab.research.google.com/). 
 
