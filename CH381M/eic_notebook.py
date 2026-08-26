@@ -260,7 +260,7 @@ def _(mo):
     mo.md(r"""
     There are a few key elements here. "def" tells it that you are defining a function. "integrate" is the function name. "x" and "y" are required arguments. These are only defined inside the function. You call them as x and y in the function block. However, they may be named something else outside the function! Because they don't have a keyword associated with them, you just supply them in the function in those positions when you call it. "min" and "max" are optional keyward arguments. They can be supplied if you want by either saying "min=2" or something like that when calling the function. They can also be supplied without the keywork, in which case it assumes the order is the same as here. If you don't supply them, the default is used.
 
-    Now, let's try using the function.
+    Now, let's try using the function. Try adjusting this with different ranges. Adjust the input data above and see how it changes.
     """)
     return
 
@@ -275,7 +275,9 @@ def _(data, integrate):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    0
+    # Putting it all together
+
+    Now that you have the key elements in place, loop through the files, extract the intensities, correct the intensities based on the internal standard and 10:1 standard ratio, and print out the percentage cholesterol in each sample. Good luck!
     """)
     return
 
