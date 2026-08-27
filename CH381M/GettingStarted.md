@@ -29,11 +29,13 @@ You can run Python directly from the command line and use text editors to write 
 
 ## Setting up Git
 
-The final piece of the development toolkit is Git. Git is a tool for tracking changes to your code. Think of it like an early version of Dropbox but where you have more control. You can "clone" a project from a repository, like GitHub. You can then make changes and commit them. Each commit is a snapshot of the project such that you can go back and undo changes that you make. There is a lot more to it, but today we will use git to clone your project.
+The final piece of the development toolkit is Git. Git is a tool for tracking changes to your code. Think of it like an early version of Dropbox but where you have more control. You can "clone" a project from a repository, like GitHub. You can then make changes and commit them. Each commit is a snapshot of the project such that you can go back and undo changes that you make. There is a lot more to it, but today we will use git to clone this project.
 
-To install git, follow the instructions in this link: https://github.com/git-guides/install-git. You can test that it is set up properly by opening a terminal and typing `git -v`.
+To install git, follow the instructions in this link: https://github.com/git-guides/install-git. You can either install it as a commandline tool or install GitHub Desktop, which gives you a user interface to clone things. You can test that it is set up properly by opening a terminal and typing `git -v`.
 
-*TODO: After setting it up, clone the project by typing `git clone https:\\github.com\michaelmarty\AnalChem.git`.
+*TODO: After setting it up, clone the project by typing `git clone https:\\github.com\michaelmarty\AnalChem.git`. You can also do this on GitHub Desktop.*
+
+Note, there are other projects for other classes in this Git repository. You can ignore them and focus on the CH381M folder.
 
 ## Final Setup
 
@@ -63,7 +65,7 @@ One way to improve this is with a Marimo notebook, which automatically resets th
 
 # Final Setup
 
-To check that everything is setup, open the eic_notebook.py and see if it is working for you. 
+To check that everything is setup, open the eic_notebook.py and see if it is working for you. You can open it in PyCharm with the Marimo plugin. You can also open a terminal and type: `marimo edit eic_notebook.py` to open it in a browser. 
 
 # A note on AI programming agents
 

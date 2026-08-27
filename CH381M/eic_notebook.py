@@ -26,7 +26,12 @@ def _(mo):
     mo.md(r"""
     # Learning Some Python Basics
 
-    Now, let's do some basic Python execution. In the next block of code, I have defined the variable x and given it a number. Define y and print the sum of the outputs. Use "shift+enter" to execute the code block or click the play icon.
+    Now, let's do some basic Python execution. In the next block of code, I have defined the variable x and given it a number.
+
+
+    **Problem 1: Define y and print the sum of the outputs.**
+
+    Use "shift+enter" to execute the code block or click the play icon.
     """)
     return
 
@@ -41,15 +46,17 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Now, let's learn about for loops. For loops iterate over a list and then do something. Here's an example.
+    Now, let's learn about for loops. For loops iterate over a list and then do something. Here's an example. Enumerate gives both the index, i, and the value, l.
+
+    **Problem 2: Loop over the list and print the square of the number. Hint, in Python ** gives you the square.**
     """)
     return
 
 
 @app.cell
 def _():
-    l = [2, 4, 6, 8]
-    for i, l in enumerate(l):
+    mylist = [2, 4, 6, 8]
+    for i, l in enumerate(mylist):
         print(i, l)
     return
 
@@ -88,7 +95,7 @@ def _(np):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    This prints a numpy array of length 10. An array is similar to a list of numbers. It's technically a "class", which means a programming object that has both variables and functions attached to it. Let's see some examples.
+    This prints a numpy array of length 10. An array is similar to a list of numbers, like we saw above. It's technically a "class", which means a programming object that has both variables and functions attached to it. Let's see some examples.
     """)
     return
 
@@ -114,7 +121,7 @@ def _(mo):
     mo.md(r"""
     # Loading Our Data
 
-    Now, let's load our data. To do this, we will first need to tell it where our data is. We will use the os library here and a function called chdir ("change directory") to set the working path to the EIC Dataset folder. If your computer struggles here, you might need to give it a more exact path for the EIC Dataset folder. Finally, we will use os.listdir() to list the current working directory, which is now the EIC Dataset folder. You should see a list of text files.
+    Now, let's load our data. To do this, we will first need to tell it where our data is. We will use the os library here (short for "operating system") and a function called chdir ("change directory") to set the working path to the EIC Dataset folder. This tells the computer where to find the files. If your computer struggles here, you might need to give it a more exact path for the EIC Dataset folder. Finally, we will use os.listdir() to list the current working directory, which is now the EIC Dataset folder. You should see a list of text files.
     """)
     return
 
@@ -163,8 +170,21 @@ def _(data):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Play around with this and see how you can slice things differently.
+    **Problem 3: Find the maximum of the intensity column. Print that value.**
+    """)
+    return
 
+
+@app.cell
+def _():
+    # Your code here
+    # Also, a # anywhere in the line means that things that come after are "comments", not code to be executed
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     # Plotting the Data
 
     To plot the data, we will use matplotlib as a library and specifically the pyplot module. We need to feed it the x and y data.
@@ -186,8 +206,15 @@ def _(data):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Now, it's your turn. Try adjusting the file names above and looking at some of the data.
+    **Problem 4: Adjust the file names above and looking at some of the different data files. Make 4 plots, one for each of the analytes (2 unknowns and 2 standards) for a give condition (either "test", "example", or "postexch").**
     """)
+    return
+
+
+@app.cell
+def _():
+    # your code here
+
     return
 
 
@@ -214,8 +241,14 @@ def _(data, np, plt):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Your turn, got back to the code and normalize the data now.
+    **Problem 5: Add in a block of code that plots the normalized data.**
     """)
+    return
+
+
+@app.cell
+def _():
+    # Your code here
     return
 
 
@@ -223,14 +256,8 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     # Plotting Multiple Things
-    """)
-    return
 
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Now, let's plot an example of each chromtogram together. Import data from each molecule from the the 2-1_test data. Plot them all together. You can do this by simply adding multiple plt.plot() lines.
+    **Problem 6: Plot an example of each chromtogram together, normalized. Import data from each molecule from the the 2-1_test data. Plot them all together. You can do this by simply adding multiple plt.plot() lines.**
     """)
     return
 
@@ -260,7 +287,9 @@ def _(mo):
     mo.md(r"""
     There are a few key elements here. "def" tells it that you are defining a function. "integrate" is the function name. "x" and "y" are required arguments. These are only defined inside the function. You call them as x and y in the function block. However, they may be named something else outside the function! Because they don't have a keyword associated with them, you just supply them in the function in those positions when you call it. "min" and "max" are optional keyward arguments. They can be supplied if you want by either saying "min=2" or something like that when calling the function. They can also be supplied without the keywork, in which case it assumes the order is the same as here. If you don't supply them, the default is used.
 
-    Now, let's try using the function. Try adjusting this with different ranges. Adjust the input data above and see how it changes.
+    Now, let's try using the function. See the example code below.
+
+    **Problem 7: Try adjusting this with different ranges. Adjust the input data above and see how it changes.**
     """)
     return
 
@@ -277,7 +306,7 @@ def _(mo):
     mo.md(r"""
     # Putting it all together
 
-    Now that you have the key elements in place, loop through the files, extract the intensities, correct the intensities based on the internal standard and 10:1 standard ratio, and print out the percentage cholesterol in each sample. Good luck!
+    **Problem 8: Now that you have the key elements in place, loop through the files, extract the intensities, correct the intensities based on the internal standard and 10:1 standard ratio, and print out the percentage cholesterol in each sample ("test", "example", and "postexch"). Good luck!**
     """)
     return
 
